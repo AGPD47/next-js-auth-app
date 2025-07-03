@@ -24,7 +24,7 @@ export default function LoginPage() {
       router.push("/profile");
     } catch (error: any) {
       console.log("Login failed", error.message);
-      toast.error(error.message);
+      toast.error(error.response?.data?.error || "Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -70,6 +70,7 @@ export default function LoginPage() {
       >
         Login
       </button>
+
       <Link href="/signup">Visit signup page</Link>
     </div>
   );
