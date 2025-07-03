@@ -70,6 +70,12 @@ export default function LoginPage() {
       >
         Login
       </button>
+      <button
+        className="text-sm text-blut-600 hover:underline mb-2"
+        onClick={() => router.push("/forgotpassword")}
+      >
+        Forgot Password?
+      </button>
 
       <Link href="/signup">Visit signup page</Link>
     </div>
